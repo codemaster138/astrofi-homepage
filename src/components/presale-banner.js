@@ -6,19 +6,22 @@ export const presaleStartTime = 1623542400000;
 export const presaleEndTime = 1624752000000;
 
 export default function PresaleBanner() {
-  const getDuration = () =>
-    Date.now() > presaleStartTime
-      ? Date.now() > presaleEndTime
-        ? "Presale over"
-        : formatDistanceToNowStrict(new Date(presaleEndTime))
-      : formatDistanceToNowStrict(new Date(presaleStartTime));
+  const getDuration = React.useCallback(
+    () =>
+      Date.now() > presaleStartTime
+        ? Date.now() > presaleEndTime
+          ? "Presale over"
+          : formatDistanceToNowStrict(new Date(presaleEndTime))
+        : formatDistanceToNowStrict(new Date(presaleStartTime)),
+    []
+  );
 
   const [duration, setDuration] = React.useState(getDuration());
   const [intervalId, setIntervalId] = React.useState(null);
 
-  function updateDuration() {
+  const updateDuration = React.useCallback(() => {
     setDuration(getDuration());
-  }
+  }, [setDuration, getDuration]);
 
   React.useEffect(() => {
     if (!intervalId) {
@@ -28,7 +31,7 @@ export default function PresaleBanner() {
     return () => {
       clearInterval(intervalId);
     };
-  }, [setIntervalId, intervalId]);
+  }, [setIntervalId, intervalId, updateDuration]);
 
   return (
     <Banner>

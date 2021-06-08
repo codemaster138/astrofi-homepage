@@ -61,6 +61,7 @@ const IndexPage = function () {
         </SplitPage>
       </Section>
       <PresaleBanner/>
+      <Section></Section>
     </Layout>
   );
 };
