@@ -11,6 +11,12 @@ const Button = styled(Link)`
   padding: 15px 30px;
   border-radius: 5px;
   display: inline-block;
+
+  &.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
 `;
 
 export const SmallButton = styled(Link)`

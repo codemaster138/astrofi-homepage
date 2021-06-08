@@ -1,6 +1,8 @@
+import { Link } from "gatsby";
 import styled from "styled-components";
 
-const Banner = styled.section`
+const Banner = styled(Link)`
+  text-decoration: none;
   width: 100%;
   display: flex;
   flex: 1 1 auto;

@@ -47,7 +47,7 @@ const Layout = ({ children }) => {
   `);
 
   return (
-    <ThemeProvider theme={getTheme('dark')}>
+    <ThemeProvider theme={getTheme('light')}>
       <Container>
         <Header siteTitle={data.site.siteMetadata?.title || `AstroFi`} />
         <Content>
