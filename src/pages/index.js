@@ -13,18 +13,8 @@ import Seo from "../components/seo";
 import styled from "styled-components";
 import Button from "../components/button";
 import PresaleBanner from "../components/presale-banner";
-import { FlexColumnCenter, FlexRowCenter, FlexRowSpread } from "../components/flex";
-
-const ImageContainer = styled.div`
-  max-width: 50%;
-  display: none;
-  box-sizing: border-box;
-  padding-left: 10vw;
-
-  @media screen and (min-width: 1000px) {
-    display: unset;
-  }
-`;
+import { FlexColumnCenter, FlexRowSpread } from "../components/flex";
+import { ImageContainer } from "../components/image-container";
 
 const Buttons = styled.div`
   margin-top: 40px;
@@ -66,13 +56,13 @@ const IndexPage = function () {
       </Section>
       <PresaleBanner />
       <Section id="service" center>
-        <HeadingTag>Our Service</HeadingTag>
+        <HeadingTag><span aria-hidden="true" role="img">🚚</span> Our Service</HeadingTag>
         <Heading center withTag>
           Enabling anyone to launch a token
         </Heading>
         <FlexRowSpread style={{ marginTop: "40px" }} align="baseline">
           <FlexColumnCenter noWidth style={{ maxWidth: "300px" }}>
-            <HeadingTag>Step 1</HeadingTag>
+            <HeadingTag><span aria-hidden="true" role="img">🏷</span> Step 1</HeadingTag>
             <Heading3 center withTag>
               Presale
             </Heading3>
@@ -82,17 +72,17 @@ const IndexPage = function () {
             </Paragraph>
           </FlexColumnCenter>
           <FlexColumnCenter noWidth style={{ maxWidth: "300px" }}>
-            <HeadingTag>Step 2</HeadingTag>
+            <HeadingTag><span aria-hidden="true" role="img">⚡️</span> Step 2</HeadingTag>
             <Heading3 center withTag>
               ICO Launch
             </Heading3>
             <Paragraph justify>
-              Our ICO service helps raise money after you've deployed your
-              project
+              In an ICO, you deploy your token first, then use the money from
+              the price growth to fund the rest of your project
             </Paragraph>
           </FlexColumnCenter>
           <FlexColumnCenter noWidth style={{ maxWidth: "300px" }}>
-            <HeadingTag>Step 3</HeadingTag>
+            <HeadingTag><span aria-hidden="true" role="img">🦄</span> Step 3</HeadingTag>
             <Heading3 center withTag>
               Exchange
             </Heading3>
@@ -104,14 +94,18 @@ const IndexPage = function () {
         </FlexRowSpread>
       </Section>
       <Section id="find-investments" center>
-        <HeadingTag center>Invest in Startups</HeadingTag>
-        <Heading center withTag>Find the right investments</Heading>
-        <Paragraph center style={{ maxWidth: '550px' }}>
+        <HeadingTag center><span aria-hidden="true" role="img">📈</span> Invest in Startups</HeadingTag>
+        <Heading center withTag>
+          Find the right investments
+        </Heading>
+        <Paragraph center style={{ maxWidth: "550px" }}>
           AstroFi provides a community-curated list of startups to invest in.
           You can also read about our oppinions on our blog.
         </Paragraph>
-        <div style={{marginTop: '20px'}}>
-          <Button primary to="/presale">Join Presale</Button>
+        <div style={{ marginTop: "20px" }}>
+          <Button primary to="/presale">
+            Join Presale
+          </Button>
           <Button to="/blog">Our blog</Button>
         </div>
       </Section>

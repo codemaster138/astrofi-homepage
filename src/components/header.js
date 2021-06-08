@@ -29,13 +29,13 @@ const LogoContainer = styled(Link)`
   .logo-icon-dark {
     height: 30px;
     width: auto;
-    display: ${p => p.theme.name === 'dark' ? 'initial' : 'none'};
+    display: ${p => (p.theme.name === "dark" ? "initial" : "none")};
   }
 
   .logo-icon-light {
     height: 30px;
     width: auto;
-    display: ${p => p.theme.name === 'light' ? 'initial' : 'none'};
+    display: ${p => (p.theme.name === "light" ? "initial" : "none")};
   }
 
   .separator {
@@ -75,27 +75,31 @@ const Navbar = styled.nav`
   }
 `;
 
-const Header = ({ siteTitle }) => (
-  <StyledHeader>
-    <LogoContainer to="/">
-      <LogoIconLight className="logo-icon-light"/>
-      <LogoIconDark className="logo-icon-dark"/>
-      <span className="separator"></span>
-      <h3>{ siteTitle }</h3>
-    </LogoContainer>
-    <Navbar>
-      <Link to="/blog">Blog</Link>
-      <SmallButton primary to="/page-2">Join Presale</SmallButton>
-    </Navbar>
-  </StyledHeader>
-)
+const Header = ({ siteTitle }) => {
+  return (
+    <StyledHeader>
+      <LogoContainer to="/">
+        <LogoIconLight className="logo-icon-light" />
+        <LogoIconDark className="logo-icon-dark" />
+        <span className="separator"></span>
+        <h3>{siteTitle}</h3>
+      </LogoContainer>
+      <Navbar>
+        <Link to="/blog">Blog</Link>
+        <SmallButton primary to="/presale">
+          Join Presale
+        </SmallButton>
+      </Navbar>
+    </StyledHeader>
+  );
+};
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-}
+};
 
 Header.defaultProps = {
   siteTitle: ``,
-}
+};
 
-export default Header
+export default Header;

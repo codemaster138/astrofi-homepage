@@ -5,7 +5,7 @@ export const HeadingTag = styled.h3`
   font-weight: 500px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: ${p => p.theme.primary};
+  color: ${p => p.theme.primary} !important;
 `;
 
 export const Heading = styled.h1`

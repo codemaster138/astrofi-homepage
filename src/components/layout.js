@@ -12,6 +12,7 @@ import styled, { ThemeProvider } from "styled-components";
 import { getTheme } from "./themes";
 
 import Header from "./header";
+import Footer from "./footer";
 import "./index.css";
 
 const Container = styled.div`
@@ -51,6 +52,7 @@ const Layout = ({ children }) => {
         <Header siteTitle={data.site.siteMetadata?.title || `AstroFi`} />
         <Content>
           { children }
+          <Footer/>
         </Content>
       </Container>
     </ThemeProvider>

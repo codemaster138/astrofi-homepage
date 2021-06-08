@@ -37,15 +37,15 @@ export default function PresaleBanner() {
     <Banner id="presale-status">
       <BannerUnit>
         <h1>{duration}</h1>
-        <p>{Date.now() > presaleStartTime ? "Time left" : "Time to presale"}</p>
+        <p><span aria-hidden="true" role="img">🕓</span> {Date.now() > presaleStartTime ? "Time left" : "Time to presale"}</p>
       </BannerUnit>
       <BannerUnit>
         <h1>{format(new Date(presaleStartTime), "yyyy/MM/dd")}</h1>
-        <p>$XAI Presale Launch</p>
+        <p><span aria-hidden="true" role="img">🗓</span> $XAI Presale Launch</p>
       </BannerUnit>
       <BannerUnit>
         <h1>{format(new Date(presaleEndTime), "yyyy/MM/dd")}</h1>
-        <p>$XAI Presale End</p>
+        <p><span aria-hidden="true" role="img">📅</span> $XAI Presale End</p>
       </BannerUnit>
     </Banner>
   );

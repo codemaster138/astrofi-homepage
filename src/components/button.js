@@ -23,6 +23,10 @@ export const SmallButton = styled(Link)`
   padding: 10px 25px;
   border-radius: 5px;
   display: inline-block;
+
+  * {
+    color: ${p => p.primary ? p.theme.primary_contrast : p.theme.foreground} !important;
+  }
 `;
 
 export default Button;
