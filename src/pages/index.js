@@ -56,12 +56,12 @@ const IndexPage = function () {
       </Section>
       <PresaleBanner />
       <Section id="service" center>
-        <HeadingTag><span aria-hidden="true" role="img">🚚</span> Our Service</HeadingTag>
-        <Heading center withTag>
+        <HeadingTag data-sal="slide-up" data-sal-delay="300"><span aria-hidden="true" role="img">🚚</span> Our Service</HeadingTag>
+        <Heading center withTag data-sal="slide-up" data-sal-delay="300">
           Enabling anyone to launch a token
         </Heading>
         <FlexRowSpread style={{ marginTop: "40px" }} align="baseline">
-          <FlexColumnCenter noWidth style={{ maxWidth: "300px" }}>
+          <FlexColumnCenter noWidth style={{ maxWidth: "300px" }} data-sal="slide-up" data-sal-delay="300">
             <HeadingTag><span aria-hidden="true" role="img">🏷</span> Step 1</HeadingTag>
             <Heading3 center withTag>
               Presale
@@ -71,7 +71,7 @@ const IndexPage = function () {
               project
             </Paragraph>
           </FlexColumnCenter>
-          <FlexColumnCenter noWidth style={{ maxWidth: "300px" }}>
+          <FlexColumnCenter noWidth style={{ maxWidth: "300px" }} data-sal="slide-up" data-sal-delay="500">
             <HeadingTag><span aria-hidden="true" role="img">⚡️</span> Step 2</HeadingTag>
             <Heading3 center withTag>
               ICO Launch
@@ -81,7 +81,7 @@ const IndexPage = function () {
               the price growth to fund the rest of your project
             </Paragraph>
           </FlexColumnCenter>
-          <FlexColumnCenter noWidth style={{ maxWidth: "300px" }}>
+          <FlexColumnCenter noWidth style={{ maxWidth: "300px" }} data-sal="slide-up" data-sal-delay="700">
             <HeadingTag><span aria-hidden="true" role="img">🦄</span> Step 3</HeadingTag>
             <Heading3 center withTag>
               Exchange
@@ -94,15 +94,15 @@ const IndexPage = function () {
         </FlexRowSpread>
       </Section>
       <Section id="find-investments" center>
-        <HeadingTag center><span aria-hidden="true" role="img">📈</span> Invest in Startups</HeadingTag>
-        <Heading center withTag>
+        <HeadingTag center data-sal="slide-up" data-sal-delay="300"><span aria-hidden="true" role="img">📈</span> Invest in Startups</HeadingTag>
+        <Heading center withTag data-sal="slide-up" data-sal-delay="300">
           Find the right investments
         </Heading>
-        <Paragraph center style={{ maxWidth: "550px" }}>
+        <Paragraph center style={{ maxWidth: "550px" }} data-sal="slide-up" data-sal-delay="300">
           AstroFi provides a community-curated list of startups to invest in.
           You can also read about our oppinions on our blog.
         </Paragraph>
-        <div style={{ marginTop: "20px" }}>
+        <div style={{ marginTop: "20px" }} data-sal="slide-up" data-sal-delay="300">
           <Button primary to="/presale">
             Join Presale
           </Button>
