@@ -31,6 +31,7 @@ const Content = styled.main`
   left: 0;
   top: 60px;
   overflow-y: auto;
+  scroll-behavior: smooth;
 `;
 
 const Layout = ({ children }) => {

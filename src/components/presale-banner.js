@@ -34,9 +34,9 @@ export default function PresaleBanner() {
   }, [setIntervalId, intervalId, updateDuration]);
 
   return (
-    <Banner>
+    <Banner id="presale-status">
       <BannerUnit>
-        <h1 style={{ fontFamily: "monospace" }}>{duration}</h1>
+        <h1>{duration}</h1>
         <p>{Date.now() > presaleStartTime ? "Time left" : "Time to presale"}</p>
       </BannerUnit>
       <BannerUnit>
