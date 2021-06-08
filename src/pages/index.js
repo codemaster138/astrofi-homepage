@@ -27,7 +27,7 @@ const IndexPage = function () {
         title="AstroFi: Fasttrack your crypto application's launch"
         description="AstroFi is an ethereum-based DeFi platform to help new DeFi projects find early investors and vice-versa"
       />
-      <Section id="hero" center>
+      <Section id="hero" center fancy>
         <SplitPage>
           <div>
             <Heading withTag>Fasttrack your crypto token launch</Heading>
@@ -93,7 +93,7 @@ const IndexPage = function () {
           </FlexColumnCenter>
         </FlexRowSpread>
       </Section>
-      <Section id="find-investments" center>
+      <Section id="find-investments" center fancy fancyBottom>
         <HeadingTag center data-sal="slide-up" data-sal-delay="300"><span aria-hidden="true" role="img">📈</span> Invest in Startups</HeadingTag>
         <Heading center withTag data-sal="slide-up" data-sal-delay="300">
           Find the right investments
