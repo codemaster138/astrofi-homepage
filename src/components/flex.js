@@ -29,6 +29,6 @@ export const FlexRowSpread = styled.div`
   flex-flow: column;
 
   @media screen and (min-width: 870px) {
-    flex-flow: row wrap;
+    flex-flow: row ${p => p.wrap || 'wrap'};
   }
 `;

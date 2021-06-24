@@ -5,6 +5,9 @@ import styled from "styled-components";
 import LogoIconLight from "../images/logo-icon-light.svg";
 import LogoIconDark from "../images/logo-icon-dark.svg";
 import { SmallButton } from "./button";
+import { createPortal } from "react-dom";
+import { UilTimes, UilBars } from "@iconscout/react-unicons";
+import { useForceUpdate } from "../utils/force-update";
 
 const StyledHeader = styled.header`
   width: 100%;
@@ -56,10 +59,26 @@ const LogoContainer = styled(Link)`
   }
 `;
 
-const Navbar = styled.nav`
+const StyledNavbar = styled.nav`
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+  flex-flow: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: ${p => p.theme.background};
+  z-index: 1000;
+
+  div {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    flex-flow: column;
+    gap: 20px;
+  }
 
   a {
     text-decoration: none;
@@ -69,11 +88,115 @@ const Navbar = styled.nav`
     text-transform: capitalize;
     margin: 0px 10px;
 
+    &.text {
+      padding: 0px 5px;
+    }
+
     &:hover {
       color: ${p => p.theme.primary};
     }
   }
+
+  button {
+    color: ${p => p.theme.foreground};
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin: 0px 10px;
+    padding-left: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    width: calc(100% - 20px);
+    background: transparent !important;
+    border: none;
+
+    &:hover {
+      color: ${p => p.theme.primary};
+      cursor: pointer;
+    }
+  }
+
+  @media screen and (min-width: 850px) {
+    position: relative;
+    width: unset;
+    height: unset;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-end;
+  }
 `;
+
+const StyledClosedNavbar = styled.div`
+  button {
+    color: ${p => p.theme.foreground};
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin: 0px 10px;
+    padding-left: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    width: calc(100% - 20px);
+    background: transparent !important;
+    border: none;
+
+    &:hover {
+      color: ${p => p.theme.primary};
+      cursor: pointer;
+    }
+  }
+`;
+
+const Navbar = ({ children }) => {
+  const [showNavbar, setShowNavbar] = React.useState(false);
+  const forceUpdate = useForceUpdate();
+  const shouldShowNavbar = () =>
+    showNavbar || (typeof window !== "undefined" && window.innerWidth > 850);
+
+  React.useEffect(() => {
+    const listener = e => {
+      forceUpdate();
+    };
+    window.addEventListener("resize", listener);
+    return () => {
+      window.removeEventListener("resize", listener);
+    };
+  });
+
+  return (
+    <>
+      {shouldShowNavbar() && window.innerWidth > 850 && (
+        <StyledNavbar>{children}</StyledNavbar>
+      )}
+      {shouldShowNavbar() &&
+        window.innerWidth < 850 &&
+        createPortal(
+          <StyledNavbar>
+            <div>
+              <button onClick={() => setShowNavbar(false)}>
+                <span>Close</span> <UilTimes size="16" />
+              </button>
+              {children}
+            </div>
+          </StyledNavbar>,
+          document.body
+        )}
+      {!shouldShowNavbar() && window.innerWidth < 850 && (
+        <StyledClosedNavbar>
+          <button onClick={() => setShowNavbar(true)}>
+            <UilBars size="16" />
+          </button>
+        </StyledClosedNavbar>
+      )}
+    </>
+  );
+};
 
 const Header = ({ siteTitle }) => {
   return (
@@ -85,7 +208,9 @@ const Header = ({ siteTitle }) => {
         <h3>{siteTitle}</h3>
       </LogoContainer>
       <Navbar>
-        <Link to="/blog">Blog</Link>
+        <Link to="/blog" className="text">
+          Blog
+        </Link>
         <SmallButton primary to="/presale">
           Join Presale
         </SmallButton>

@@ -17,7 +17,7 @@ const NotFoundPage = () => (
         <div>
           <Heading>Page Not Found</Heading>
           <Paragraph>
-            “Mommy, do you believe in aliens?” – “Yes, Tommy. They stole the
+            “Mom, do you believe in aliens?” – “Yes, Tommy. They stole the
             website.”
           </Paragraph>
           <div style={{ marginTop: '20px' }}>

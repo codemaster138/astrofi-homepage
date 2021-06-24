@@ -30,10 +30,11 @@ const IndexPage = function () {
       <Section id="hero" center fancy>
         <SplitPage>
           <div>
-            <Heading withTag>Fasttrack your crypto token launch</Heading>
+            <HeadingTag>Reach for the stars</HeadingTag>
+            <Heading withTag>Build DeFi projects faster</Heading>
             <Paragraph>
-              AstroFi is an ethereum-based platform to help new DeFi projects
-              find early investment and vice-versa
+              AstroFi is an polygon-based platform that takes care of all the
+              hard stuff in crypto so you can focus on innovation
             </Paragraph>
             <Buttons>
               <Button primary to="/#presale-status">
@@ -45,7 +46,7 @@ const IndexPage = function () {
           <ImageContainer>
             <StaticImage
               placeholder="blurred"
-              src="../images/astrofi deco.png"
+              src="../images/astrofi deco 5.png"
               alt="Deco"
               aria-hidden="true"
               id="deco-image"
@@ -56,53 +57,102 @@ const IndexPage = function () {
       </Section>
       <PresaleBanner />
       <Section id="service" center>
-        <HeadingTag data-sal="slide-up" data-sal-delay="300"><span aria-hidden="true" role="img">🚚</span> Our Service</HeadingTag>
+        <HeadingTag data-sal="slide-up" data-sal-delay="300">
+          <span aria-hidden="true" role="img">
+            🚚
+          </span>{" "}
+          Our Services
+        </HeadingTag>
         <Heading center withTag data-sal="slide-up" data-sal-delay="300">
-          Enabling anyone to launch a token
+          Accellerate your DeFi project
         </Heading>
         <FlexRowSpread style={{ marginTop: "40px" }} align="baseline">
-          <FlexColumnCenter noWidth style={{ maxWidth: "300px" }} data-sal="slide-up" data-sal-delay="300">
-            <HeadingTag><span aria-hidden="true" role="img">🏷</span> Step 1</HeadingTag>
+          <FlexColumnCenter
+            noWidth
+            style={{ maxWidth: "300px" }}
+            data-sal="slide-up"
+            data-sal-delay="300"
+          >
+            <HeadingTag>
+              <span aria-hidden="true" role="img">
+                🔨
+              </span>{" "}
+              Step 1
+            </HeadingTag>
+            <Heading3 center withTag>
+              Build on AstroFi
+            </Heading3>
+            <Paragraph justify>
+              AstroFi provides a suite of DeFi contracts like stablecoins and
+              governance so you don't have to reinvent the wheel
+            </Paragraph>
+          </FlexColumnCenter>
+          <FlexColumnCenter
+            noWidth
+            style={{ maxWidth: "300px" }}
+            data-sal="slide-up"
+            data-sal-delay="500"
+          >
+            <HeadingTag>
+              <span aria-hidden="true" role="img">
+                🚀
+              </span>{" "}
+              Step 2
+            </HeadingTag>
             <Heading3 center withTag>
               Presale
             </Heading3>
             <Paragraph justify>
-              Our presale service helps raise the you need money to deploy your
-              project
+              Run an AstroSale Presale to raise capital for your project quickly
+              and in a place where investors can easily find you
             </Paragraph>
           </FlexColumnCenter>
-          <FlexColumnCenter noWidth style={{ maxWidth: "300px" }} data-sal="slide-up" data-sal-delay="500">
-            <HeadingTag><span aria-hidden="true" role="img">⚡️</span> Step 2</HeadingTag>
+          <FlexColumnCenter
+            noWidth
+            style={{ maxWidth: "300px" }}
+            data-sal="slide-up"
+            data-sal-delay="700"
+          >
+            <HeadingTag>
+              <span aria-hidden="true" role="img">
+                🦄
+              </span>{" "}
+              Step 3
+            </HeadingTag>
             <Heading3 center withTag>
-              ICO Launch
+              Launch
             </Heading3>
             <Paragraph justify>
-              In an ICO, you deploy your token first, then use the money from
-              the price growth to fund the rest of your project
-            </Paragraph>
-          </FlexColumnCenter>
-          <FlexColumnCenter noWidth style={{ maxWidth: "300px" }} data-sal="slide-up" data-sal-delay="700">
-            <HeadingTag><span aria-hidden="true" role="img">🦄</span> Step 3</HeadingTag>
-            <Heading3 center withTag>
-              Exchange
-            </Heading3>
-            <Paragraph justify>
-              Once your ICO is over, provide liquidity on our exchange service
-              so people can trade your token
+              Once your presale is over, deploy your project's smart contracts to
+              ethereum mainnet
             </Paragraph>
           </FlexColumnCenter>
         </FlexRowSpread>
       </Section>
       <Section id="find-investments" center fancy fancyBottom>
-        <HeadingTag center data-sal="slide-up" data-sal-delay="300"><span aria-hidden="true" role="img">📈</span> Invest in Startups</HeadingTag>
+        <HeadingTag center data-sal="slide-up" data-sal-delay="300">
+          <span aria-hidden="true" role="img">
+            📈
+          </span>{" "}
+          Invest in Startups
+        </HeadingTag>
         <Heading center withTag data-sal="slide-up" data-sal-delay="300">
           Find the right investments
         </Heading>
-        <Paragraph center style={{ maxWidth: "550px" }} data-sal="slide-up" data-sal-delay="300">
+        <Paragraph
+          center
+          style={{ maxWidth: "550px" }}
+          data-sal="slide-up"
+          data-sal-delay="300"
+        >
           AstroFi provides a community-curated list of startups to invest in.
           You can also read about our oppinions on our blog.
         </Paragraph>
-        <div style={{ marginTop: "20px" }} data-sal="slide-up" data-sal-delay="300">
+        <div
+          style={{ marginTop: "20px" }}
+          data-sal="slide-up"
+          data-sal-delay="300"
+        >
           <Button primary to="/presale">
             Join Presale
           </Button>

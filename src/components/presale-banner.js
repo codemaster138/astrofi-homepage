@@ -2,8 +2,8 @@ import * as React from "react";
 import Banner, { BannerUnit } from "./banner";
 import { format, formatDistanceToNowStrict } from "date-fns";
 
-export const presaleStartTime = 1623542400000;
-export const presaleEndTime = 1624752000000;
+export const presaleStartTime = 1625356800000;
+export const presaleEndTime = 1625961600000;
 
 export default function PresaleBanner() {
   const getDuration = React.useCallback(

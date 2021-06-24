@@ -11,8 +11,12 @@ export const HeadingTag = styled.h3`
 export const Heading = styled.h1`
   font-size: clamp(36px, 4.2vw, 60px);
   margin-bottom: 20px;
-  text-align: ${p => (p.center ? "center" : "left")};
+  text-align: ${p => p.centerMobile ? 'center' : (p.center ? "center" : "left")};
   margin-top: ${p => (p.withTag ? "0px" : "initial")};
+
+  @media screen and (min-width: 870px) {
+    text-align: ${p => (p.center ? "center" : "left")};
+  }
 `;
 
 export const Heading2 = styled.h2`

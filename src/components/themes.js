@@ -9,7 +9,7 @@ export const baseTheme = {
   success_tint: "#42d77d",
   success_shade: "#29be64",
 
-  warning: "#ffc409",
+  warning: "#ffc403",
   warning_contrast: "#000000",
   warning_tint: "#ffca22",
   warning_shade: "#e6b008",

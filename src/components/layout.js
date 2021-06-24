@@ -33,6 +33,7 @@ const Content = styled.main`
   top: 60px;
   overflow-y: auto;
   scroll-behavior: smooth;
+  z-index: 10;
 `;
 
 const Layout = ({ children }) => {
@@ -47,7 +48,7 @@ const Layout = ({ children }) => {
   `);
 
   return (
-    <ThemeProvider theme={getTheme('light')}>
+    <ThemeProvider theme={getTheme('dark')}>
       <Container>
         <Header siteTitle={data.site.siteMetadata?.title || `AstroFi`} />
         <Content>
