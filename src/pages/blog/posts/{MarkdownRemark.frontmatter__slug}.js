@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import Section from "../../../components/section";
 import Layout from "../../../components/layout";
+import Seo from "../../../components/seo";
 import { GatsbyImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 
@@ -37,6 +38,7 @@ export default function Template({
   const { frontmatter, html } = markdownRemark;
   return (
     <Layout>
+      <Seo title={frontmatter.title} description={frontmatter.description} />
       <StyledSection fancy thin>
         <h1 class="title">{frontmatter.title}</h1>
         <h4 class="date">

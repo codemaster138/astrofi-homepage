@@ -14,6 +14,7 @@ import BlogPostSmall from "../../components/blog-post-small";
 import { graphql } from "gatsby";
 import Button from "../../components/button";
 import { FlexRowSpread } from "../../components/flex";
+import Seo from "../../components/seo";
 
 const RightSide = styled.div`
   width: 47.5vw;
@@ -32,6 +33,10 @@ export default function BlogPage({
 }) {
   return (
     <Layout>
+      <Seo
+        title="AstroFi Blog"
+        description="AstroFi is a polygon-based DeFi platform to help new DeFi projects get off the ground faster"
+      />
       <Section center fancy>
         <SplitPage>
           <div>
@@ -64,14 +69,17 @@ export default function BlogPage({
         </SplitPage>
       </Section>
       <Section id="posts">
-        <HeadingTag data-sal="slide-up" data-sal-delay="300">Stay up to date</HeadingTag>
+        <HeadingTag data-sal="slide-up" data-sal-delay="300">
+          Stay up to date
+        </HeadingTag>
         <Heading centerMobile withTag data-sal="slide-up" data-sal-delay="300">
           Newest Posts
         </Heading>
         <FlexRowSpread wrap="nowrap">
           {edges.slice(0, 2).map(edge => (
             <BlogPostBig
-              data-sal="slide-up" data-sal-delay="300"
+              data-sal="slide-up"
+              data-sal-delay="300"
               title={edge.node.frontmatter.title}
               description={edge.node.excerpt}
               to={`/blog/posts/${edge.node.frontmatter.slug}`}
@@ -84,12 +92,17 @@ export default function BlogPage({
       </Section>
       {edges.length > 2 && (
         <Section id="old-posts" fancy fancyBottom>
-          <HeadingTag data-sal="slide-up" data-sal-delay="300">All the knowledge</HeadingTag>
-          <Heading2 withTag data-sal="slide-up" data-sal-delay="300">More Posts</Heading2>
+          <HeadingTag data-sal="slide-up" data-sal-delay="300">
+            All the knowledge
+          </HeadingTag>
+          <Heading2 withTag data-sal="slide-up" data-sal-delay="300">
+            More Posts
+          </Heading2>
           <FlexRowSpread>
             {edges.slice(2).map(edge => (
               <BlogPostSmall
-              data-sal="slide-up" data-sal-delay="300"
+                data-sal="slide-up"
+                data-sal-delay="300"
                 title={edge.node.frontmatter.title}
                 description={edge.node.excerpt.slice(0, 60) + "..."}
                 to={`/blog/posts/${edge.node.frontmatter.slug}`}

@@ -5,6 +5,9 @@ import { format, formatDistanceToNowStrict } from "date-fns";
 export const presaleStartTime = 1625356800000;
 export const presaleEndTime = 1625961600000;
 
+export const rhoPresaleStartTime = 1628467200000;
+export const rhoPresaleEndTime = 1629072000000;
+
 export default function PresaleBanner() {
   const getDuration = React.useCallback(
     () =>

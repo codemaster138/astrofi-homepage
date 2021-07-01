@@ -34,6 +34,14 @@ export const Heading3 = styled.h3`
   font-weight: 500;
 `;
 
+export const Heading4 = styled.h4`
+  font-size: clamp(18px, 2vw, 24px);
+  margin-bottom: 20px;
+  text-align: ${p => (p.center ? "center" : "left")};
+  margin-top: ${p => (p.withTag ? "0px" : "initial")};
+  font-weight: 500;
+`;
+
 export const Paragraph = styled.p`
   font-size: 18px;
   text-align: ${p => (p.center ? "center" : (p.justify ? "justify" : "left"))};

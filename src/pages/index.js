@@ -24,8 +24,8 @@ const IndexPage = function () {
   return (
     <Layout>
       <Seo
-        title="AstroFi: Fasttrack your crypto application's launch"
-        description="AstroFi is an ethereum-based DeFi platform to help new DeFi projects find early investors and vice-versa"
+        title="AstroFi: Build DeFi projects faster"
+        description="AstroFi is a polygon-based DeFi platform to help new DeFi projects get off the ground faster"
       />
       <Section id="hero" center fancy>
         <SplitPage>
@@ -123,38 +123,62 @@ const IndexPage = function () {
               Launch
             </Heading3>
             <Paragraph justify>
-              Once your presale is over, deploy your project's smart contracts to
-              ethereum mainnet
+              Once your presale is over, deploy your project's smart contracts
+              to ethereum mainnet
             </Paragraph>
           </FlexColumnCenter>
         </FlexRowSpread>
       </Section>
-      <Section id="find-investments" center fancy fancyBottom>
+      <Section id="astrosale" center>
         <HeadingTag center data-sal="slide-up" data-sal-delay="300">
-          <span aria-hidden="true" role="img">
-            📈
-          </span>{" "}
-          Invest in Startups
+          AstroSale
         </HeadingTag>
-        <Heading center withTag data-sal="slide-up" data-sal-delay="300">
-          Find the right investments
+        <Heading center data-sal="slide-up" data-sal-delay="300">
+          Launch your crypto project
         </Heading>
         <Paragraph
           center
-          style={{ maxWidth: "550px" }}
+          style={{ maxWidth: "500px" }}
           data-sal="slide-up"
           data-sal-delay="300"
         >
-          AstroFi provides a community-curated list of startups to invest in.
-          You can also read about our oppinions on our blog.
+          AstroSale is a decentralized service that allows you to launch your
+          crypto project and be discovered easily by investors.
         </Paragraph>
         <div
           style={{ marginTop: "20px" }}
           data-sal="slide-up"
           data-sal-delay="300"
         >
-          <Button primary to="/presale">
-            Join Presale
+          <Button primary to="/astrosale">
+            Learn More
+          </Button>
+          <Button to="/blog">Our blog</Button>
+        </div>
+      </Section>
+      <Section id="rhotoken" center fancy fancyBottom>
+        <HeadingTag center data-sal="slide-up" data-sal-delay="300">
+          RHO Token
+        </HeadingTag>
+        <Heading center data-sal="slide-up" data-sal-delay="300">
+          Stable store of value
+        </Heading>
+        <Paragraph
+          center
+          style={{ maxWidth: "500px" }}
+          data-sal="slide-up"
+          data-sal-delay="300"
+        >
+          The $RHO token is a stablecoin pegged to $1 for apps that need stable
+          collateral or investors that need to keep their money safe
+        </Paragraph>
+        <div
+          style={{ marginTop: "20px" }}
+          data-sal="slide-up"
+          data-sal-delay="300"
+        >
+          <Button primary to="/rho">
+            Learn More
           </Button>
           <Button to="/blog">Our blog</Button>
         </div>
