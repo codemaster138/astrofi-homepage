@@ -211,6 +211,12 @@ const Header = ({ siteTitle }) => {
         <Link to="/blog" className="text">
           Blog
         </Link>
+        <Link to="/rho" className="text">
+          $RHO Token
+        </Link>
+        <Link to="/astrosale" className="text">
+          AstroSale
+        </Link>
         <SmallButton primary to="/presale">
           Join Presale
         </SmallButton>

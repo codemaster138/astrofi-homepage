@@ -46,4 +46,5 @@ export const Paragraph = styled.p`
   font-size: 18px;
   text-align: ${p => (p.center ? "center" : (p.justify ? "justify" : "left"))};
   ${p => p.lastJustify ? "text-align-last: justify;" : ""}
+  line-height: 1.5;
 `;

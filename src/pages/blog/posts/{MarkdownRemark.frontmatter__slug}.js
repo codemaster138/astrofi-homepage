@@ -24,6 +24,7 @@ const StyledSection = styled(Section)`
   p {
     font-size: 20px;
     opacity: 0.8;
+    line-height: 1.5;
   }
 
   .post-cover {
