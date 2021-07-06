@@ -9,7 +9,7 @@ export default function Policy() {
   return (
     <Layout>
       <Seo title="AstroFi disclaimer" description="A quick legal disclaimer" />
-      <Section fancy center>
+      <Section center>
         <div style={{ maxWidth: "600px" }}>
           <HeadingTag>Legal Information</HeadingTag>
           <Heading>Disclaimer</Heading>

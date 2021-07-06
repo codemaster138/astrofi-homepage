@@ -69,7 +69,6 @@ export default function Footer() {
       <div>
         <Link to="/" className="text">Home</Link>
         <Link to="/blog" className="text">Blog</Link>
-        <Link to="/docs" className="text">Docs</Link>
         <Link to="https://github.com/astro-fi/astrofi/issues" className="text">Issues</Link>
         <Link to="/rho" className="text">$RHO</Link>
       </div>
@@ -77,6 +76,7 @@ export default function Footer() {
         <Link to="https://github.com/astro-fi/astrofi/issues" className="text-sub">Issues</Link>
         <Link to="https://github.com/astro-fi/astrofi/pulls" className="text-sub">Pull Requests</Link>
         <Link to="/disclaimer" className="text-sub">Disclaimer</Link>
+        <Link to="/terms-of-use" className="text-sub">Terms of Use</Link>
       </div>
     </StyledFooter>
   );

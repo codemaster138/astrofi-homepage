@@ -171,11 +171,11 @@ const Navbar = ({ children }) => {
 
   return (
     <>
-      {shouldShowNavbar() && window.innerWidth > 850 && (
+      {shouldShowNavbar() && (typeof window !== "undefined" && window.innerWidth > 850) && (
         <StyledNavbar>{children}</StyledNavbar>
       )}
       {shouldShowNavbar() &&
-        window.innerWidth < 850 &&
+        (typeof window !== "undefined" && window.innerWidth < 850) &&
         createPortal(
           <StyledNavbar>
             <div>
@@ -187,7 +187,7 @@ const Navbar = ({ children }) => {
           </StyledNavbar>,
           document.body
         )}
-      {!shouldShowNavbar() && window.innerWidth < 850 && (
+      {!shouldShowNavbar() &&(typeof window !== "undefined" && window.innerWidth < 850) && (
         <StyledClosedNavbar>
           <button onClick={() => setShowNavbar(true)}>
             <UilBars size="16" />

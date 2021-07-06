@@ -6,6 +6,7 @@
   "author": "Jake Sarjeant <jakesarjeant13@gmail.com>",
   "dependencies": {
     "@iconscout/react-unicons": "^1.1.6",
+    "babel-plugin-styled-components": "^1.13.1",
     "color": "^3.1.3",
     "date-fns": "^2.22.1",
     "gatsby": "^3.6.2",
@@ -17,6 +18,7 @@
     "gatsby-plugin-react-svg": "^3.0.1",
     "gatsby-plugin-scroll-reveal": "^0.0.7",
     "gatsby-plugin-sharp": "^3.6.0",
+    "gatsby-plugin-styled-components": "^4.8.0",
     "gatsby-source-filesystem": "^3.6.0",
     "gatsby-transformer-remark": "^4.4.1",
     "gatsby-transformer-sharp": "^3.6.0",

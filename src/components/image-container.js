@@ -5,6 +5,7 @@ export const ImageContainer = styled.div`
   display: none;
   box-sizing: border-box;
   padding-left: 10vw;
+  position: relative;
 
   .only-light {
     display: ${p => p.theme.name === 'light' ? 'block' : 'none'};
