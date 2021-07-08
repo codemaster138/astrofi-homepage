@@ -28,14 +28,14 @@ const PresalePage = () => {
               <h1>Launch Website</h1>
               <p>Build & launch the AstroFi Website and Blog</p>
             </div>
-            <span className="status status-current">In progress</span>
+            <span className="status status-done">Completed</span>
           </RoadmapCard>
           <RoadmapCard data-sal="slide-up" data-sal-delay="300">
             <div>
               <h1>Launch AstroFi Presale</h1>
               <p>Launch the XAI token, presale contract and base presale app</p>
             </div>
-            <span className="status">Coming soon</span>
+            <span className="status status-done">Completed</span>
           </RoadmapCard>
           <RoadmapCard data-sal="slide-up" data-sal-delay="300">
             <div>
@@ -45,7 +45,7 @@ const PresalePage = () => {
                 control the AstroFi protocol
               </p>
             </div>
-            <span className="status">Coming soon</span>
+            <span className="status status-current">In progress</span>
           </RoadmapCard>
           <RoadmapCard data-sal="slide-up" data-sal-delay="300">
             <div>
@@ -54,32 +54,18 @@ const PresalePage = () => {
                 Begin allowing users to list their own presales on the platform
               </p>
             </div>
-            <span className="status">Coming soon</span>
+            <span className="status status-current">In progress</span>
           </RoadmapCard>
           <RoadmapCard data-sal="slide-up" data-sal-delay="300">
             <div>
-              <h1>AstroSale ICO public beta</h1>
-              <p>Begin allowing users to list their ICOs on the platform</p>
+              <h1>AstroSale multi-chain compatibility</h1>
+              <p>Bring AstroSale & AstroSale ICO to other layer 2 ethereum chains</p>
             </div>
             <span className="status">Coming soon</span>
           </RoadmapCard>
           <RoadmapCard data-sal="slide-up" data-sal-delay="300">
             <div>
-              <h1>AstroSale & AstroSale ICO multi-chain compatibility</h1>
-              <p>Bring AstroSale & AstroSale ICO to layer 2 ethereum chains</p>
-            </div>
-            <span className="status">Coming soon</span>
-          </RoadmapCard>
-          <RoadmapCard data-sal="slide-up" data-sal-delay="300">
-            <div>
-              <h1>AstroSale & AstroSale ICO Cardano compatibility</h1>
-              <p>Bring AstroSale & AstroSale ICO to the cardanano blockchain (after Cardano Smart Contract launch)</p>
-            </div>
-            <span className="status">Coming soon</span>
-          </RoadmapCard>
-          <RoadmapCard data-sal="slide-up" data-sal-delay="300">
-            <div>
-              <h1>AstroSale & AstroSale ICO Launch</h1>
+              <h1>AstroSale Launch</h1>
               <p>
                 Officially release AstroSale and AstroSale ICO to the general
                 public

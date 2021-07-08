@@ -1,7 +1,5 @@
-import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
 import Button from "../components/button";
-import { ImageContainer } from "../components/image-container";
 import Layout from "../components/layout";
 import PresaleBanner, {
   presaleEndTime,
@@ -9,7 +7,6 @@ import PresaleBanner, {
 } from "../components/presale-banner";
 import Section from "../components/section";
 import Seo from "../components/seo";
-import SplitPage from "../components/split-page";
 import { Heading, HeadingTag, Paragraph } from "../components/typography";
 
 const PresalePage = () => {
@@ -33,7 +30,7 @@ const PresalePage = () => {
           {/* TODO: Set presale link */}
           <Button
             primary
-            to="presale-link"
+            to="https://app.astrofi.io/"
             className={
               Date.now() > presaleStartTime && Date.now() < presaleEndTime
                 ? ""
@@ -49,41 +46,6 @@ const PresalePage = () => {
         </div>
       </Section>
       <PresaleBanner />
-      <Section center>
-        <SplitPage>
-          <div>
-            <HeadingTag data-sal="slide-up" data-sal-delay="300">
-              Finance
-            </HeadingTag>
-            <Heading withTag data-sal="slide-up" data-sal-delay="400">
-              Funding Distribution
-            </Heading>
-            <Paragraph data-sal="slide-up" data-sal-delay="500">
-              When the presale is over, we aim to allocate 80% of funding to
-              liquidity on UniSwap and the rest to development expenses like
-              deploying contracts
-            </Paragraph>
-          </div>
-          <ImageContainer data-sal="slide-up" data-sal-delay="600">
-            <StaticImage
-              placeholder="blurred"
-              src={`../images/presale-distribution-graph.svg`}
-              alt="Funding Graph: 80% Liquidity, 20% Development Expenses"
-              id="deco-image"
-              className="only-light"
-              style={{ maxWidth: "100%", width: "clamp(400px, 10vw, 600px)" }}
-            />
-            <StaticImage
-              placeholder="blurred"
-              src={`../images/presale-distribution-graph-dark.svg`}
-              alt="Funding Graph: 80% Liquidity, 20% Development Expenses"
-              id="deco-image-dark"
-              className="only-dark"
-              style={{ maxWidth: "100%", width: "clamp(400px, 10vw, 600px)" }}
-            />
-          </ImageContainer>
-        </SplitPage>
-      </Section>
       <Section center fancy fancyBottom>
         <HeadingTag center data-sal="slide-up" data-sal-delay="300">
           Our Masterplan
